@@ -63,4 +63,27 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+    /*public void getAccessToken() {
+        // Required for all types of tokens
+        String twilioAccountSid = "ACxxxxxxxxxxxx";
+        String twilioApiKey = "SKxxxxxxxxxxxx";
+        String twilioApiSecret = "xxxxxxxxxxxxxx";
+
+        String identity = "alice";
+
+        // Create Video grant
+        VideoGrant grant = new VideoGrant();
+        grant.setRoom("DailyStandup");
+
+        // Create access token
+        AccessToken token = new AccessToken.Builder(
+                twilioAccountSid,
+                twilioApiKey,
+                twilioApiSecret
+        ).identity(identity).grant(grant).build();
+
+        System.out.println(token.toJwt());
+    }*/
+
 }

@@ -26,6 +26,13 @@ android {
     }
 }
 
+repositories {
+    // Twilio Maven repository - currently required for TwilioCommon
+    maven {
+        url "http://media.twiliocdn.com/sdk/maven/"
+    }
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.1.0'
@@ -35,7 +42,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
     implementation 'com.google.android.material:material:1.0.0'
-    implementation 'com.twilio:video-android:5.0.0'
+    //implementation 'com.twilio:video-android:5.0.0'
+    implementation 'com.twilio:conversations-android:0.8.1' //Last: 0.12.2
     implementation 'com.squareup.okhttp3:okhttp:4.2.1'
     testImplementation 'com.squareup.okhttp3:mockwebserver:4.2.1'
 }
